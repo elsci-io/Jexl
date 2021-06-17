@@ -146,6 +146,16 @@ describe('Lexer', () => {
         }
       ])
     })
+    it('recognizes string contains operator', () => {
+      const tokens = inst.getTokens(['*=='])
+      expect(tokens).toEqual([
+        {
+          type: 'binaryOp',
+          value: '*==',
+          raw: '*=='
+        }
+      ])
+    })
     it('recognizes identifiers', () => {
       const tokens = inst.getTokens(['_foo9_bar'])
       expect(tokens).toEqual([

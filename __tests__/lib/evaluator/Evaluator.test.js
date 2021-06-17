@@ -190,4 +190,37 @@ describe('Evaluator', () => {
     const e = new Evaluator(grammar, context)
     await expect(e.eval(toTree(expr))).resolves.toBe(26)
   })
+  it('evaluates an expression with *==', async () => {
+    const context = {
+      name: 'Alice'
+    }
+    const expr = 'name *== "ice"'
+    const e = new Evaluator(grammar, context)
+    await expect(e.eval(toTree(expr))).resolves.toBe(true)
+  })
+  it('*== comparator is case-sensitive', async () => {
+    const context = {
+      name: 'Alice'
+    }
+    const expr = 'name *== "al"'
+    const e = new Evaluator(grammar, context)
+    await expect(e.eval(toTree(expr))).resolves.toBe(false)
+  })
+  it('*== returns true if right site is empty', async () => {
+    const context = {
+      name: 'Alice'
+    }
+    const expr = 'name *== ""'
+    const e = new Evaluator(grammar, context)
+    await expect(e.eval(toTree(expr))).resolves.toBe(true)
+  })
+  it('*== returns false if left site is not a string', async () => {
+    const context = {
+      name: 'Alice',
+      score: 100
+    }
+    const expr = 'score *== "100"'
+    const e = new Evaluator(grammar, context)
+    await expect(e.eval(toTree(expr))).resolves.toBe(false)
+  })
 })
