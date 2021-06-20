@@ -1,7 +1,7 @@
 {
-  "name": "jexl",
-  "version": "2.3.0",
-  "description": "Javascript Expression Language: Powerful context-based expression parser and evaluator",
+  "name": "elsci-jexl",
+  "version": "2.4.0",
+  "description": "Fork of JEXL: Javascript Expression Language: Powerful context-based expression parser and evaluator",
   "main": "dist/Jexl.js",
   "files": [
     "dist"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TomFrost/jexl"
+    "url": "https://github.com/elsci-io/elsci-jexl"
   },
   "keywords": [
     "JSON",
@@ -32,9 +32,9 @@
   "author": "Tom Shawver <tom@frosteddesign.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TomFrost/jexl/issues"
+    "url": "https://github.com/elsci-io/elsci-jexl/issues"
   },
-  "homepage": "https://github.com/TomFrost/jexl",
+  "homepage": "https://github.com/elsci-io/elsci-jexl",
   "eslintIgnore": [
     "node_modules",
     "coverage"
