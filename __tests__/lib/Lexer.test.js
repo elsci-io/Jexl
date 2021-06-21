@@ -147,12 +147,12 @@ describe('Lexer', () => {
       ])
     })
     it('recognizes string contains operator', () => {
-      const tokens = inst.getTokens(['*=='])
+      const tokens = inst.getTokens(['==*'])
       expect(tokens).toEqual([
         {
           type: 'binaryOp',
-          value: '*==',
-          raw: '*=='
+          value: '==*',
+          raw: '==*'
         }
       ])
     })
