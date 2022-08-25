@@ -1,6 +1,6 @@
 {
   "name": "elsci-jexl",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Fork of JEXL: Javascript Expression Language: Powerful context-based expression parser and evaluator",
   "main": "dist/Jexl.js",
   "files": [
